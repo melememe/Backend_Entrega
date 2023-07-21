@@ -15,7 +15,7 @@ import sequelize from '../config/database.js'
 import Carrera from "./carrera.js"
 import Rol from "./rol.js"
 
-const Persona = sequelize.define('Personas', {
+const Persona = sequelize.define('personas', {
     idPersona: {
         type: DataTypes.INTEGER,
         primaryKey: true,

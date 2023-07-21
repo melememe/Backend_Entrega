@@ -6,10 +6,10 @@
     carrera:"Ingeneria de Sistemas",
     curso: "Programación Web",
   }*/
-import { DATE, DataTypes } from "sequelize"
+import { DataTypes } from "sequelize"
 import sequelize from '../config/database.js'
 
-const Universidad = sequelize.define('Universidades', {
+const Universidad = sequelize.define('universidades', {
     idUniversidad: {
         type: DataTypes.INTEGER,
         primaryKey: true,

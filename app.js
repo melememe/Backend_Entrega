@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors'
 
-import personaRoutes from './src/routes/docentes.js';
+import personaRoutes from './src/routes/personas.js';
 
 let app = express();
 app.use(bodyParser.json());
