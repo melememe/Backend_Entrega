@@ -2,7 +2,7 @@ import Alumno from '../models/alumno.js'
 
 const findAll = async () => {
     try {
-        const result = await Curso.findAll();
+        const result = await Alumno.findAll();
         console.log(result)
         return result;
 

@@ -14,6 +14,6 @@ app.get('/', (req, res) => {
 })
 
 app.use("/docentes", docentesRoutes);
-app.use("/cursos", alumnosRoutes);
+app.use("/alumnos", alumnosRoutes);
 
 export default app
