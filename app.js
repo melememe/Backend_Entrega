@@ -1,9 +1,9 @@
-    import express from 'express';
+import express from 'express';
 import bodyParser from 'body-parser';
 import cors from 'cors'
 
 import docentesRoutes from './src/routes/docentes.js';
-import cursosRoutes from './src/routes/cursos.js';
+import alumnosRoutes from './src/routes/alumnos.js';
 
 let app = express();
 app.use(bodyParser.json());
@@ -14,6 +14,6 @@ app.get('/', (req, res) => {
 })
 
 app.use("/docentes", docentesRoutes);
-app.use("/cursos", cursosRoutes);
+app.use("/cursos", alumnosRoutes);
 
 export default app
