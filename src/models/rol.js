@@ -9,20 +9,14 @@
 import { DATE, DataTypes } from "sequelize"
 import sequelize from '../config/database.js'
 
-const Alumno = sequelize.define('alumnos', {
-    id: {
+const Rol = sequelize.define('roles', {
+    idRol: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
-    nombre: {
-        type: DataTypes.STRING
-    },
-    imagen:{
-        type: DataTypes.STRING
-    },
-    carrera: {
+    rol: {
         type: DataTypes.STRING
     },
 })
@@ -30,4 +24,4 @@ const Alumno = sequelize.define('alumnos', {
 
 
 
-export default Alumno
+export default Rol

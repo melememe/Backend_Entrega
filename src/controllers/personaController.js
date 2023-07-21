@@ -1,27 +1,27 @@
-import AlumnoRepository from "../repository/alumnoRepository.js";
+import PersonaRepository from "../repository/personaRepository.js";
 
 const findAll = async (req, res) => {
-    const result = await AlumnoRepository.findAll();
+    const result = await PersonaRepository.findAll();
 
     return sendResponse(result, res);
 }
 
 const findOne = async (req, res) => {
     const id = req.params.id;
-    const result = await AlumnoRepository.findOne(id);
+    const result = await PersonaRepository.findOne(id);
 
     return sendResponse(result, res);
 }
 
 const create = async (req, res) => {
-
-    const result = await AlumnoRepository.create(req.body);
+    
+    const result = await PersonaRepository.create(req.body);
 
     return sendResponse(result, res);
 }
 
 const update = async (req,res) => {
-    const result = await AlumnoRepository.update(req.body)
+    const result = await PersonaRepository.update(req.body)
 
     return sendResponse(result, res);
 }
@@ -30,7 +30,7 @@ const remove = async (req, res) => {
 
     const id = req.params.id;
 
-    const result = await AlumnoRepository.remove(id)
+    const result = await PersonaRepository.remove(id)
 
     return sendResponse(result, res);
 }
@@ -42,6 +42,6 @@ const sendResponse = (result, res) => {
         return res.status(500).json({ message: 'Ha ocurrido un error'})
 } 
 
-const AlumnoController = { findAll, create, findOne, update, remove }
+const PersonaController = { findAll, create, findOne, update, remove }
 
-export default AlumnoController;
+export default PersonaController;

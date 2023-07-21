@@ -1,11 +1,9 @@
-import Docente from '../models/docente.js'
+import Persona from '../models/persona.js'
 
 const findAll = async () => {
     try {
-
-        const result = await Docente.findAll();
-        console.debug(result)
-
+        const result = await Persona.findAll();
+        console.log(result)
         return result;
 
     } catch(err) {
@@ -15,12 +13,12 @@ const findAll = async () => {
     }
 }
 
-const create = async (docente) => {
+const create = async (persona) => {
     try {
 
-        const newdocente = await Docente.create(docente);
+        const newPersona = await Persona.create(persona);
 
-        return newdocente;
+        return newPersona;
 
     } catch(err) {
         console.error(err)
@@ -31,7 +29,7 @@ const create = async (docente) => {
 
 const findOne = async (id) => {
     try {
-        return await Docente.findOne({
+        return await Persona.findOne({
             where: {
                 id
             }
@@ -43,19 +41,19 @@ const findOne = async (id) => {
     }
 }
 
-const update = async (docente) => {
+const update = async (persona) => {
     try {
-        const founddocente =  await Docente.findOne({
+        const foundPersona =  await Persona.findOne({
             where: {
-                id: docente.id
+                id: alumno.id
             }
         })
 
-        founddocente.set(docente)
+        foundPersona.set(alumno)
 
-        founddocente.save()
+        foundPersona.save()
 
-        return founddocente;
+        return foundPersona;
 
     }
     catch(err) {
@@ -66,7 +64,7 @@ const update = async (docente) => {
 
 const remove = async (id) => {
     try {
-        await Docente.destroy({
+        await Persona.destroy({
             where: {
                 id
             }
@@ -82,6 +80,6 @@ const remove = async (id) => {
 }
 
 
-const DocentesRepository = { findAll, create, findOne,update, remove };
+const PersonaRepository = { findAll, create, findOne,update, remove };
 
-export default DocentesRepository; 
+export default PersonaRepository; 

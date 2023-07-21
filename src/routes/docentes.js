@@ -1,7 +1,7 @@
 import express from 'express'
-import DocenteController from '../controllers/docenteController.js';
+import PersonaController from '../controllers/personaController.js';
 
-const { findAll, create, update, remove, findOne } = DocenteController
+const { findAll, create, update, remove, findOne } = PersonaController
 
 const router = express.Router()
 
