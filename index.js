@@ -1,5 +1,5 @@
 import app from './app.js'
-import sequelize from '/PROGRAWEB_TRABAJO/Backend/src/config/database.js'
+import sequelize from '/Backend_Entrega/src/config/database.js'
 
 async function main() {
     try {
