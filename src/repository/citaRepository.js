@@ -1,8 +1,8 @@
-import Persona from '../models/persona.js'
+import Cita from '../models/cita.js'
 
 const findAll = async () => {
     try {
-        const result = await Persona.findAll();
+        const result = await Cita.findAll();
         console.log(result)
         return result;
 
@@ -13,12 +13,12 @@ const findAll = async () => {
     }
 }
 
-const create = async (persona) => {
+const create = async (cita) => {
     try {
 
-        const newPersona = await Persona.create(persona);
+        const newCita = await Cita.create(cita);
 
-        return newPersona;
+        return newCita;
 
     } catch(err) {
         console.error(err)
@@ -29,7 +29,7 @@ const create = async (persona) => {
 
 const findOne = async (id) => {
     try {
-        return await Persona.findOne({
+        return await Cita.findOne({
             where: {
                 id
             }
@@ -41,19 +41,19 @@ const findOne = async (id) => {
     }
 }
 
-const update = async (persona) => {
+const update = async (cita) => {
     try {
-        const foundPersona =  await Persona.findOne({
+        const foundCita =  await Cita.findOne({
             where: {
                 id: alumno.id
             }
         })
 
-        foundPersona.set(alumno)
+        foundCita.set(cita)
 
-        foundPersona.save()
+        foundCita.save()
 
-        return foundPersona;
+        return foundCita;
 
     }
     catch(err) {
@@ -64,7 +64,7 @@ const update = async (persona) => {
 
 const remove = async (id) => {
     try {
-        await Persona.destroy({
+        await Cita.destroy({
             where: {
                 id
             }
@@ -80,6 +80,6 @@ const remove = async (id) => {
 }
 
 
-const PersonaRepository = { findAll, create, findOne,update, remove };
+const CitaRepository = { findAll, create, findOne,update, remove };
 
-export default PersonaRepository; 
+export default CitaRepository; 

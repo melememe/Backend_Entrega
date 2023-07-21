@@ -64,7 +64,7 @@ const update = async (universidad) => {
 
 const remove = async (id) => {
     try {
-        await Persona.destroy({
+        await Universidad.destroy({
             where: {
                 id
             }
@@ -80,6 +80,6 @@ const remove = async (id) => {
 }
 
 
-const PersonaRepository = { findAll, create, findOne,update, remove };
+const UniversidadRepository = { findAll, create, findOne,update, remove };
 
-export default PersonaRepository; 
+export default UniversidadRepository; 
