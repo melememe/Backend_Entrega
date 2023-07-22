@@ -2,8 +2,10 @@ import Persona from '../models/persona.js'
 
 const findAll = async () => {
     try {
+
         const result = await Persona.findAll();
-        console.log(result)
+        console.debug(result)
+
         return result;
 
     } catch(err) {
@@ -16,9 +18,9 @@ const findAll = async () => {
 const create = async (persona) => {
     try {
 
-        const newPersona = await Persona.create(persona);
+        const newpersona = await Persona.create(persona);
 
-        return newPersona;
+        return newpersona;
 
     } catch(err) {
         console.error(err)
@@ -43,17 +45,17 @@ const findOne = async (id) => {
 
 const update = async (persona) => {
     try {
-        const foundPersona =  await Persona.findOne({
+        const foundpersona =  await Persona.findOne({
             where: {
-                id: alumno.id
+                id: persona.id
             }
         })
 
-        foundPersona.set(alumno)
+        foundpersona.set(persona)
 
-        foundPersona.save()
+        foundpersona.save()
 
-        return foundPersona;
+        return foundpersona;
 
     }
     catch(err) {
@@ -80,6 +82,7 @@ const remove = async (id) => {
 }
 
 
-const PersonaRepository = { findAll, create, findOne,update, remove };
+const PersonasRepository = { findAll, create, findOne,update, remove };
 
-export default PersonaRepository; 
+export default PersonasRepository; 
+
