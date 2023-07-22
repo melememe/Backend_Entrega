@@ -1,14 +1,12 @@
 import express from 'express'
 import PersonaController from '../controllers/personaController.js';
 
-const { findAll, create, update, remove, findOne } = PersonaController
-
 const router = express.Router()
 
-router.get("/", findAll)
-router.post("/", create)
-router.put("/", update)
-router.delete("/:id", remove)
-router.get("/:id", findOne)
+router.get("/", PersonaController.findAll)
+router.post("/", PersonaController.create)
+router.put("/", PersonaController.update)
+router.delete("/:id", PersonaController.remove)
+router.get("/:id", PersonaController.findOne)
 
 export default router;
