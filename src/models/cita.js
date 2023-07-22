@@ -15,7 +15,7 @@ import sequelize from '../config/database.js'
 import Persona from "./persona.js"
 import Curso from "./curso.js"
 
-const Cita = sequelize.define('Citas', {
+const Cita = sequelize.define('citas', {
     idCita: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -26,13 +26,13 @@ const Cita = sequelize.define('Citas', {
         type: DataTypes.INTEGER
     },
     Fecha: {
-        type: DATE
+        type: DataTypes.DATE
     },
     HoraInicio:{
-        type: Date
+        type: DataTypes.DATE
     },
     Horafin:{
-        type: Date
+        type: DataTypes.DATE
     },
     enlaceSesion:{
         type: DataTypes.STRING

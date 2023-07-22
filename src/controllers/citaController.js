@@ -42,6 +42,6 @@ const sendResponse = (result, res) => {
         return res.status(500).json({ message: 'Ha ocurrido un error'})
 } 
 
-const PersonaController = { findAll, create, findOne, update, remove }
+const CitaController = { findAll, create, findOne, update, remove }
 
-export default PersonaController;
+export default CitaController;

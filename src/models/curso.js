@@ -10,7 +10,7 @@ import { DATE, DataTypes } from "sequelize"
 import sequelize from '../config/database.js'
 import Carrera from "./carrera.js"
 
-const Curso = sequelize.define('Cursos', {
+const Curso = sequelize.define('cursos', {
     idCurso: {
         type: DataTypes.INTEGER,
         primaryKey: true,

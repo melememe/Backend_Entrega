@@ -10,7 +10,7 @@ import { DATE, DataTypes } from "sequelize"
 import sequelize from '../config/database.js'
 import Persona from "./persona.js"
 
-const Horario = sequelize.define('Horarios', {
+const Horario = sequelize.define('horarios', {
     idHorario: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -21,13 +21,13 @@ const Horario = sequelize.define('Horarios', {
         type: DataTypes.INTEGER
     },
     horaInicio: {
-        type: DATE
+        type: DataTypes.DATE
     },
     diaDeLaSemana: {
-        type: DATE
+        type: DataTypes.DATE
     },
     horafin: {
-        type: DATE
+        type: DataTypes.DATE
     }
 
 })

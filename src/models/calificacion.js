@@ -10,7 +10,7 @@ import { DATE, DataTypes } from "sequelize"
 import sequelize from '../config/database.js'
 import Cita from "./cita.js"
 
-const Calificacion = sequelize.define('Calificaciones', {
+const Calificacion = sequelize.define('calificacion', {
     idCalificacion: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -41,4 +41,4 @@ Cita.hasMany(Calificacion, {
     targetId: 'id'
 })
 
-export default Curso
+export default Calificacion
